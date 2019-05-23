@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# test: xdpyinfo | grep Composite --> Composite
+
+xcompmgr -slt
