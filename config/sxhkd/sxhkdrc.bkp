@@ -2,38 +2,53 @@
 # SUPER + FUNCTION KEYS #
 #########################
 
-# Browser
+# Vivaldi
+super + F1
+	vivaldi-stable
+
+# Atom
 super + F2
-	brave
+	atom
 
 #Inkscape
 super + F3
+    inkscape
 
 #Gimp
 super + F4
+    gimp
 
 #Meld
 super + F5
-    	meld
+    meld
 
 #Vlc
 super + F6
-    	vlc --video-on-top
+    vlc --video-on-top
 
 #Virtualbox
 super + F7
+    virtualbox
 
 #Thunar
 super + F8
-    	thunar
+    thunar
 
 #Evolution
 super + F9
+    evolution
 
 #Spotify
 super + F10
-    	spotify
+    spotify
 
+#Rofi Fullscreen
+super + F11
+    rofi -show run -fullscreen
+
+#Rofi
+super + F12
+    rofi -show run
 
 #########################
 # SUPER + ... KEYS      #
@@ -41,7 +56,7 @@ super + F10
 
 #Atom
 super + e
-    	xfce4-terminal -e vim
+    atom
 
 #Toggle fullscreen of window
 super + f
@@ -49,14 +64,11 @@ super + f
 
 #Htop
 super + h
-    	xfce4-terminal -e htop
+    urxvt 'htop task manager' -e htop
 
 #music player
 super + m
-    	spotify
-
-super + l
-	slimlock	
+    pragha
 
 # Toggle pseudo tiling of window
 super + p
@@ -64,48 +76,40 @@ super + p
 
 #Rofi theme selector
 super + r
-    	rofi-theme-selector
+    rofi-theme-selector
 
-# xfce4-terminal
+#Urxvt
 super + t
-    	xfce4-terminal
+    urxvt
 
 #Pavucontrol
 super + v
-    	pavucontrol
+    pavucontrol
 
-# window list
+#Browser
 super + w
-    	rofi -show window
-
-# google-chrome
-super + g
-	google-chrome-stable
+    vivaldi-stable
 
 #Hide polybar
 super + y
-    	polybar-msg cmd toggle
+    polybar-msg cmd toggle
 
 #Oblogout
 super + x
-    	oblogout
+    oblogout
 
 #Xkill
 super + Escape
-    	xkill
+    xkill
 
 #Terminal emulator
 super + Return
-	xfce4-terminal
+	urxvt
 
 #Keyboard dependent
 #Terminal emulator
 #super + KP_Enter
 #	urxvt
-
-# Browser
-super + ctrl + Return
-        firefox   
 
 #########################
 # SUPER + SHIFT KEYS    #
@@ -120,6 +124,7 @@ super + shift + Return
 #super + shift + KP_Enter
 #	thunar
 
+
 #DMENU
 super + shift + d
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
@@ -133,20 +138,17 @@ super + shift + s
 	pkill -USR1 -x sxhkd
 
 #kill
-super + q
+super + shift + q
 	bspc node -c
+
+#kill
+super + q
+	bspc node -c	
 
 #Logout
 super + shift + x
 	bspc quit
 
-# Spotify
-super + shift + m
-    playerctl play-pause
-super + shift + n
-    playerctl next
-super + shift + p
-    playerctl previous
 
 #########################
 # CONTROL + ALT KEYS    #
@@ -158,31 +160,35 @@ ctrl + alt + a
 
 #File-Manager
 ctrl + alt + b
-     brave
+     thunar
 
 #Catfish
 ctrl + alt + c
      catfish
 
-# htop
+#Evolution
+ctrl + alt + e
+     evolution
+
+#Firefox
+ctrl + alt + f
+     firefox
+
+#Chromium
+ctrl + alt + g
+     chromium -no-default-browser-check
+
+#Nitrogen
 ctrl + alt + i
-     xfce4-terminal -e htop
+     nitrogen
 
 #Screen-Locker
-ctrl + alt + l
+ctrl + alt + k
      slimlock
 
 #Xfce4-settings-manager
 ctrl + alt + m
      xfce4-settings-manager
-
-# Firefox 
-ctrl + alt + f
-	firefox
-
-# google-chrome 
-ctrl + alt + g
-	google-chrome-stable
 
 #Compton Toggle
 ctrl + alt + o
@@ -192,6 +198,10 @@ ctrl + alt + o
 ctrl + alt + s
      spotify
 
+#Urxvt
+ctrl + alt + t
+     urxvt
+
 #Rofi theme selector
 ctrl + alt + r
    rofi-theme-selector
@@ -200,17 +210,32 @@ ctrl + alt + r
 ctrl + alt + u
      pavucontrol
 
-# Terminal
-ctrl + alt + t
-    xfce4-terminal
+#Vivaldi
+ctrl + alt + v
+     vivaldi-stable
+
+#Atom
+ctrl + alt + w
+     atom
+
+#Urxvt
+ctrl + alt + Return
+     urxvt
+
+#Keyboard dependent
+#Urxvt
+#ctrl + alt + KP_Enter
+#     urxvt
 
 #pamac-manager
 ctrl + alt + p
      pamac-manager
 
+
 #########################
 # ALT + ... KEYS        #
 #########################
+
 
 #Wallpaper trash
 alt + t
@@ -250,11 +275,13 @@ alt + F2
 
 #Xfce4-appfinder
 alt + F3
-	rofi -show drun -show-icons
+    xfce4-appfinder
+
 
 #########################
 #VARIETY KEYS WITH PYWAL#
 #########################
+
 
 #Wallpaper trash
 alt + shift + t
@@ -284,9 +311,12 @@ alt + shift + u
 ctrl + shift + Escape
     xfce4-taskmanager
 
+
 #########################
 #     SCREENSHOTS       #
 #########################
+
+
 
 #Scrot
 Print
@@ -295,6 +325,11 @@ Print
 #screeenshooter
 ctrl + Print
      xfce4-screenshooter
+
+#Gnome-Screenshot
+ctrl + shift + Print
+     gnome-screenshot -i
+
 
 #########################
 #     MULTIMEDIA KEYS   #
@@ -356,8 +391,8 @@ XF86MonBrightnessDown
 #################################################################
 
 #Focus selected desktop FOR QWERTY KEYBOARDS
-super + {1-6}
-	bspc desktop -f '^{1-6}'
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
 
 #Focus selected desktop	FOR AZERTY KEYBOARDS
 #super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
@@ -366,8 +401,8 @@ super + {1-6}
 #################################################################
 
 #Move window to selected desktop FOR QWERTY KEYBOARDS
-super + shift + {1-6}
-    id=$(bspc query -N -n); bspc node -d ^{1-6}; bspc node -f ${id}}
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #Move window to selected desktop FOR AZERTY KEYBOARDS
 #super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
@@ -375,13 +410,15 @@ super + shift + {1-6}
 
 #################################################################
 
+
 #Focus selected desktop
 alt + Tab
-	bspc desktop -f '^{1-5,6}'
+	bspc desktop -f '^{1-9,10}'
 
 #Focus selected desktop
 super + Tab
-	bspc desktop -f '^{1-5,6}'
+	bspc desktop -f '^{1-9,10}'
+
 
 # Focus next/previous window
 ctrl + alt + Left
@@ -408,7 +445,7 @@ super + {_,shift + }{h,j,k,l}
 	bspc node --{focus,swap} {west,south,north,east}
 
 # Focus/swap windows by direction
-super + {Left,Down,Up,Right}
+ctrl + super + {Left,Down,Up,Right}
 	bspc node --{focus} {west,south,north,east}
 
 # Flip layout vertically/horizontally

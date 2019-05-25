@@ -3,3 +3,6 @@
 # test: xdpyinfo | grep Composite --> Composite
 
 xcompmgr -slt
+
+# nagy betűk karakteres felületen
+figlet
