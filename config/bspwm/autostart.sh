@@ -26,7 +26,7 @@ feh --bg-scale ~/.config/bspwm/wallpaper/wd01.jpg &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 
-conky -c $HOME/.config/bspwm/system-overview &
+#conky -c $HOME/.config/bspwm/system-overview &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &

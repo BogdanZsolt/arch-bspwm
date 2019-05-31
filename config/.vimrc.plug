@@ -1,0 +1,8 @@
+call plug#begin('~/.vim/plugins')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()

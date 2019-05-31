@@ -60,6 +60,7 @@ bspc rule -a VirtualBox Machine state=fullscreen
 #Floating applications
 bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
+bspc rule -a yad floating=on
 #bspc rule -a mpv state=floating sticky=on
 #bspc rule -a Font-manager state=floating
 bspc rule -a Galculator state=floating
@@ -71,7 +72,7 @@ bspc rule -a Oblogout state=floating
 #bspc rule -a rofi state=floating sticky=on
 #bspc rule -a Skype state=floating
 #bspc rule -a Stacer state=floating
-#bspc rule -a Xfce4-appfinder state=floating sticky=on
+bspc rule -a Xfce4-appfinder state=floating sticky=on
 
 #Tiled applications
 bspc rule -a Gnome-disks state=tiled
