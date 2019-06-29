@@ -19,8 +19,10 @@ $HOME/.config/polybar/launch.sh &
 #setxkbmap -layout be
 
 #F7#Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-scale ~/.config/bspwm/wallpaper/wd01.jpg &
-#feh --randomize --bg-fill ~/Képek/*
+#feh --bg-scale ~/.config/bspwm/wallpaper/wd01.jpg &
+#feh --randomize --bg-fill ~/.config/bspwm/wallpaper/* &
+wal -i $HOME/.config/bspwm/wallpaper -n
+feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 
 xsetroot -cursor_name left_ptr &

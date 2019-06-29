@@ -76,7 +76,7 @@ super + v
 
 # window list
 super + w
-    	rofi -show window
+    	rofi -show window -show-icons
 
 # google-chrome
 super + g
@@ -105,7 +105,7 @@ super + Return
 
 # Browser
 super + ctrl + Return
-        firefox   
+        google-chrome-stable  
 
 #########################
 # SUPER + SHIFT KEYS    #
@@ -122,8 +122,9 @@ super + shift + Return
 
 #DMENU
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-
+	#dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmen.sh
+	
 #Reload bspwm
 super + shift + r
 	~/.config/bspwm/bspwmrc
@@ -141,11 +142,11 @@ super + shift + x
 	bspc quit
 
 # Spotify
-super + shift + m
+alt + m
     playerctl play-pause
-super + shift + n
+alt + n
     playerctl next
-super + shift + p
+alt + p
     playerctl previous
 
 #########################
@@ -211,38 +212,6 @@ ctrl + alt + p
 #########################
 # ALT + ... KEYS        #
 #########################
-
-#Wallpaper trash
-alt + t
-    variety -t
-
-#Wallpaper next
-alt + n
-    variety -n
-
-#Wallpaper previous
-alt + p
-    variety -p
-
-#Wallpaper favorite
-alt + f
-    variety -f
-
-#Wallpaper previous
-alt + Left
-    variety -p
-
-#Wallpaper next
-alt + Right
-    variety -n
-
-#Wallpaper pause
-alt + Up
-    variety --pause
-
-#Wallpaper resume
-alt + Down
-    variety --resume
 
 #Gmrun
 alt + F2
@@ -414,6 +383,9 @@ super + {Left,Down,Up,Right}
 # Flip layout vertically/horizontally
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
+
+super + control + {Left,Down,Up,Right }
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}	
 
 # Expand tiled space
 alt + shift + {h,j,k,l}

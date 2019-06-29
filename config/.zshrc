@@ -105,5 +105,6 @@ alias upgrade="trizen -Suyy --noconfirm"
 alias update='sudo pacman -Suy --color auto'
 alias add="trizen -S --noconfirm"
 alias mirror='sudo reflector --protocol https --latest 50 --number 20 --sort rate --save /etc/pacman.d/mirrorlist'
+alias orph='sudo pacman -Rns $(pacman -Qtdq)'
 
 neofetch
